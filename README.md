@@ -24,13 +24,13 @@ We used the classic **Iris dataset**, containing 150 samples with 4 features:
    df = pd.DataFrame(iris.data, columns=iris.feature_names)
    df['target'] = iris.target
 ```
-
+```
 ## 2. Explore data using Pandas
-```python
 
-   df.info()
-   df.describe()
-   df.head()
+```python
+df.info()
+df.describe()
+df.head()
 ```
 
 ## 3. Visualize relationships
