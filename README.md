@@ -1,4 +1,4 @@
-# iCodeGuru ML Workshop: How to Train a Model?
+# ML Algorithim-KNN: How to Train a Model?
 
 This project was completed as part of the iCodeGuru workshop **“Discussion on Machine Learning Libraries & Mini-Project: How to Train a Model?”** conducted by **Sir Abdullah Sajid**.
 
