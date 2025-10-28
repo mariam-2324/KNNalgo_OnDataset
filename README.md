@@ -17,13 +17,51 @@ We used the classic **Iris dataset**, containing 150 samples with 4 features:
 
 ## ⚙️ Steps Performed
 1. **Load the dataset**
-   ```python
+   ``` python
    from sklearn.datasets import load_iris
    import pandas as pd
    iris = load_iris()
    df = pd.DataFrame(iris.data, columns=iris.feature_names)
    df['target'] = iris.target
+```
 
+## 2. Explore data using Pandas
+```python
 
+   df.info()
+   df.describe()
+   df.head()
+```
+
+## 3. Visualize relationships
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.pairplot(df, hue='target')
+plt.show()
+```
+
+## 4. Train & Evaluate Model
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+X = iris.data
+y = iris.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
+
+y_pred = knn.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, y_pred))
+```
+
+## 📊 Output
+
+- Model Accuracy: ~1.0 (100%) on the test split
+
+- Clear visualization of class clusters using Seaborn pair plots.
 
    
